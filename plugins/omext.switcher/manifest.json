@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "id": "omext.switcher",
+  "name": "Switcher",
+  "version": "1.0.0",
+  "author": "omarchy-extended",
+  "license": "MIT",
+  "description": "Alt + Tab as a window switcher (omext switcher): the open windows, last used first, to step through while Alt is held; let go and you're there.",
+  "kinds": [
+    "service"
+  ],
+  "entryPoints": {
+    "service": "Service.qml"
+  }
+}
