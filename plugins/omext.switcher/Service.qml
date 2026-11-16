@@ -52,6 +52,9 @@ Item {
   function iconOf(c) {
     var d = root.docked[c.address]
     if (d && d.icon) return root.iconSource(d.icon)
+    // A browser profile's own icon (omext core), so its windows tell apart.
+    var p = coreApps.item && coreApps.item.profileIconOf ? coreApps.item.profileIconOf(c) : ""
+    if (p) return root.iconSource(p)
     var e = root.entryOf(c)
     return root.iconSource(e && e.icon ? e.icon : String(c.class || "").toLowerCase())
   }
